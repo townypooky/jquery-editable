@@ -9,9 +9,9 @@ jQueryと`jquery.editable.js`をロードすれば使えます。
 
 ```
 
-`&lt;p&gt;`〜`/&lt;p&gt;`を編集するには、下記のようにします。
+`<p>`〜`</p>`を編集するには、下記のようにします。
 ```js
-$('p').editable('click', function(value, origin){
+$('span').editable('click', function(value, origin){
     // 変更をサーバーに送るには例えばこう
     $.ajax({
         url: './apply',
@@ -28,7 +28,7 @@ $('p').editable('click', function(value, origin){
 
 ダブルクリックで編集、フォームを`textarea`にするには、下記のようにします。
 ```js
-$('p').editable({
+$('div').editable({
     action: 'dblclick',
     multiline: true
 }, function(value, origin){
